@@ -58,6 +58,7 @@ img {
   color: #333333;
   text-decoration: none;
   margin-top: 10px;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
@@ -70,5 +71,79 @@ img {
   }
   .navbar__logo {
     width: 90px;
+  }
+}
+/** Стили для главного экрана **/
+.hero {
+  padding: 50px 0;
+}
+.hero-block {
+  display: flex;
+}
+.hero-text {
+  /** Чтобы разделить один большой блок на две части используем flex-basis **/
+  flex-basis: 50%;
+  padding-right: 140px;
+}
+.hero-text__title {
+  font-size: 41px;
+  font-weight: 700;
+  line-height: 55px;
+  margin-bottom: 40px;
+}
+.hero-text__subtitle {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 70px;
+}
+.hero-list {
+  margin: 0;
+  padding: 0;
+}
+.hero-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.hero-list__image {
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffd200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.hero-list__text {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-block {
+    flex-direction: column;
+  }
+  .hero__list {
+    margin-bottom: 44px;
+  }
+  .hero__text {
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-block__text__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  .hero-block__text__subtitle {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .hero-block-list__text {
+    font-size: 102px;
   }
 }
